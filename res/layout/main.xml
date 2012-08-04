@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="0,2"
+    android:background="@drawable/bg_android">
+    
+    <TextView android:background="@color/line"
+		android:layout_height="1px" android:layout_width="fill_parent"/>
+		
+    <TableRow>
+		<TextView
+			android:id="@+id/score"
+			android:layout_column="0"
+			android:layout_width="fill_parent"
+			android:layout_height="48px"
+			android:gravity="center_horizontal"
+			android:padding="5dip" 
+			android:textColor="#FFFFFF"
+			android:textSize="40sp"
+			android:text="000" />
+			
+		<ImageButton android:id="@+id/gameStatus"
+			android:layout_column="1"
+			android:background="@drawable/smiley_button_states"
+			android:scaleType="center"
+			android:padding="5dip" 
+			android:layout_width="48px"
+			android:layout_height="48px"/>
+		
+		<TextView
+			android:id="@+id/timer"
+			android:layout_column="2"
+			android:layout_width="fill_parent"
+			android:layout_height="48px"
+			android:gravity="center_horizontal"
+			android:padding="5dip" 
+			android:textColor="#FFFFFF"
+			android:textSize="40sp"
+			android:text="000" />
+    </TableRow>
+    
+    <TextView android:background="@color/line"
+		android:layout_height="1px" android:layout_width="fill_parent"/>
+    
+	<TableRow>
+		<TextView
+			android:layout_column="0"
+			android:layout_width="fill_parent"
+			android:layout_height="30px"
+			android:layout_span="3"
+			android:padding="10dip"/>
+	</TableRow>
+		
+	<LinearLayout 
+   		android:id="@+id/DiamondField"
+   		android:layout_marginLeft="28dp"
+   		android:layout_marginRight="29dp"
+   		android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal">
+	</LinearLayout>
+	
+	<RelativeLayout android:layout_gravity="center_horizontal" android:layout_marginTop="10dp"
+		android:layout_width="fill_parent" android:orientation="horizontal" android:layout_height="wrap_content">
+		
+		<ImageView android:id="@+id/helpUser1" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:background="@drawable/help"
+				android:layout_alignParentLeft="true" android:layout_marginTop="24dp"
+				android:layout_marginLeft="2dp" android:visibility="invisible"/>
+				
+		<RelativeLayout android:paddingLeft="27dp" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"
+			android:layout_width="18dp" android:orientation="vertical"  android:layout_height="71dip" >
+			
+			<appnet.diamond.VerticalSeekBar
+				android:id="@+id/SeekBarUser1" android:progressDrawable="@drawable/progress_vertical"
+				android:thumb="@drawable/seek_thumb" android:layout_height="70dp" android:visibility="invisible"
+				android:layout_width="16dip" android:layout_alignParentLeft="true"/>
+		</RelativeLayout>
+		
+		<RelativeLayout android:paddingRight="29dp" android:layout_alignParentRight="true" android:layout_alignParentLeft="true"
+			android:layout_width="18dp" android:orientation="vertical"  android:layout_height="71dip" >
+		
+			<appnet.diamond.VerticalSeekBar
+				android:id="@+id/SeekBarUser2" android:progressDrawable="@drawable/progress_vertical"
+				android:thumb="@drawable/seek_thumb" android:layout_height="70dp" android:visibility="invisible"
+				android:layout_width="16dip" android:layout_alignParentRight="true"/>
+		</RelativeLayout>
+		
+		<ImageView android:id="@+id/helpUser2" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:background="@drawable/help"
+				android:layout_alignParentRight="true" android:layout_marginTop="24dp"
+				android:layout_marginRight="2dp" android:visibility="invisible"/>
+		
+	</RelativeLayout>
+		
+	<RelativeLayout android:layout_gravity="center_horizontal" android:layout_marginTop="5dp"
+		android:layout_width="fill_parent" android:orientation="horizontal" android:layout_height="fill_parent">
+		
+			<TextView android:id="@+id/nameUser1" android:layout_alignParentLeft="true"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginLeft="1dp" android:visibility="invisible"/>
+						
+			<TextView android:id="@+id/nameUser2" android:layout_alignParentRight="true"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginRight="2dp" android:visibility="invisible"/>
+	
+	</RelativeLayout>
+			
+</TableLayout>
